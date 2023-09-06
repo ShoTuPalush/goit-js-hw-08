@@ -24,7 +24,7 @@ function getText() {
 }
 
 function updateText() {
-  storage = localStorage.getItem(LOCALESTORAGE_KEY);
+  const storage = localStorage.getItem(LOCALESTORAGE_KEY);
   if (storage !== null) {
     const storageText = JSON.parse(storage);
     form.elements.email.value = storageText.email;
