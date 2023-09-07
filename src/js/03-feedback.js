@@ -34,7 +34,11 @@ function updateText() {
 
 function submitForm(event) {
   event.preventDefault();
-  console.log(getText());
-  form.reset();
-  localStorage.removeItem(LOCALESTORAGE_KEY);
+  const email = form.elements.email.value;
+  const message = form.elements.message.value;
+  if (email !== '' && message !== '') {
+    console.log(getText());
+    form.reset();
+    localStorage.removeItem(LOCALESTORAGE_KEY);
+  }
 }
